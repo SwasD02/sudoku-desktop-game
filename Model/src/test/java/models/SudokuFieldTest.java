@@ -27,4 +27,13 @@ public class SudokuFieldTest {
             assertTrue(field3.compareTo(field1) > 0);
         });
     }
+    @Test
+    void testEquals() {
+        SudokuField field1 = new SudokuField(5);
+        SudokuField field2 = new SudokuField(5);
+        SudokuField field3 = new SudokuField(6);
+
+        assertTrue(field1.equals(field2));
+        assertTrue(!field1.equals(field3));
+    }
 }
